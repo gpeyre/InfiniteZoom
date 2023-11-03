@@ -4,6 +4,9 @@
 
 This toolbox contains a set of scripts and directories for interactive drawing and infinite zoom animation creation. For now, only the MATLAB version is available. 
 
+<video src="images/anim.mp4" controls="controls" style="max-width: 730px;">
+</video>
+
 ![image 1](images/im1.png)![image 2](images/im2.png)![image 3](images/im3.png)![image 4](images/im4.png)
 
 ## License

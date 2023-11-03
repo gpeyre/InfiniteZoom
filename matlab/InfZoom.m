@@ -1,9 +1,9 @@
 %% Parameter to be changed if needed.
 
 % Number of frames to be processed
-Nb = 50;
+Nb = 11;
 % Number of images to interpolate between frames
-K = 20;
+K = 10;
 % Define input and output directories
 rep_in = 'output'; % directory where input images are located
 out_dir = 'animation'; % directory where output images will be saved

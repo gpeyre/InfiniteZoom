@@ -46,7 +46,7 @@ function DrawingInteractive(num)
     set(ax, 'XTick', [], 'YTick', [], 'XTickLabel', [], 'YTickLabel', []);
 
     % Load and flip the image vertically
-    imageName = sprintf('im%d.png', num);
+    imageName = sprintf('output/im%d.png', num);
     try
         img = imread(imageName);
         img = img(end:-1:1,:,:); % Flip vertically
