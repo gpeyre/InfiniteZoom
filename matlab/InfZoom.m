@@ -1,11 +1,14 @@
+%% Parameter to be changed if needed.
 
-%% Parameter to be changed if needed
+% Number of frames to be processed
+Nb = 50;
+% Number of images to interpolate between frames
+K = 20;
 % Define input and output directories
 rep_in = 'output'; % directory where input images are located
 out_dir = 'animation'; % directory where output images will be saved
-write_mode = 1; % flag to determine whether to write output images to file
-% Number of frames to be processed
-Nb = 50;
+% flag to determine whether to write output images to file
+write_mode = 1; 
 
 % Add the "toolbox" directory to the path to use its functions and scripts
 addpath("toolbox/")
@@ -25,8 +28,6 @@ n = size(f{1}, 1);
 % Scaling factors - Note: the second assignment overrides the first one
 rho = 2; % Final scaling factor for zoom
 
-% Number of images to interpolate between frames
-K = 20;
 % Generate zoom levels between half-size and full-size
 zl = rho.^linspace(-1, 0, K + 1); 
 zl(end) = []; % Remove the last element to have exactly K zoom levels
@@ -39,7 +40,6 @@ for it = 1:Nb
     for i = 1:K
         % Current zoom level
         z = zl(i);
-        
         % Calculate the size of the resized image
         q = round(z * n * rho);
         % Resize the current frame according to the zoom level
@@ -51,7 +51,6 @@ for it = 1:Nb
             sel1 = (q - 1)/2 - n/2 + 1 : (q - 1)/2 + n/2;
         end
         F = F(sel1, sel1);
-
         % Ensure pixel values are within [0,1]
         F(F < 0) = 0;
         F(F > 1) = 1;
