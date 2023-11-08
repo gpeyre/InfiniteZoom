@@ -51,4 +51,4 @@ for it in range(1,Nb+1):
         # Increment the counter and save the image if write_mode is true
         k += 1
         if write_mode :
-            F.save(f'{out_dir}\img{num2str(k, 4)}.png')
+            F.save(f'{out_dir}\img{num2str(k, 4)}.eps')
