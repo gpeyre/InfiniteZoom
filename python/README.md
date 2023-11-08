@@ -6,8 +6,8 @@ This toolbox contains a set of Python scripts and directories for interactive dr
 
 You need to install the following programs :
 
-- Install [ImageMagick]([link-to-imagemagick](https://imagemagick.org/)).
-- Install [Ghostscript]([link-to-ghostscript](https://ghostscript.com/releases/gsdnld.html))
+- Install [ImageMagick](https://imagemagick.org/).
+- Install [Ghostscript](https://ghostscript.com/releases/gsdnld.html).
 
 ## Directory Structure
 
