@@ -26,7 +26,6 @@ from PIL import Image, ImageTk
 
 
 w,h = 1024, 1024 # width and height of the figure
-wm,hm = 100,100 # corresponding marges
 c = 0 #image counter
 
 # Initialize the figure
@@ -115,20 +114,20 @@ def nextImage():
     global c
     c+=1
     
-    canvas.postscript(file=f'output\im{c}.eps') # save canvas as encapsulated postscript
+    canvas.postscript(file=f'output\im{c}.eps',width = w, height = h) # save canvas as encapsulated postscript
     
     image = Image.open(f'output\im{c}.eps')
     image = image.resize((w//2,h//2), Image.LANCZOS)
     image = ImageTk.PhotoImage(image)
     canvas.delete('all')
     app.image = image
-    canvas.create_image(w//2,h//2, image=image, anchor='center')
+    canvas.create_image(w//4,h//4, image=image, anchor='nw')
 
 
 def endImage():
     global c
     c+=1
-    canvas.postscript(file=f'output\im{c}.eps') # save canvas as encapsulated postscript
+    canvas.postscript(file=f'output\im{c}.eps',width = w, height = h) # save canvas as encapsulated postscript
     app.destroy()
 
 
